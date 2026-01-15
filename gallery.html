@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | SDG 17 Partnerships</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GLOBAL JS for all pages -->
+    <script src="script.js" defer></script>
+
+    <!-- GALLERY CAROUSEL JS (only here) -->
+    <script src="carousel.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <nav aria-label="Primary navigation">
+        <div class="logo">
+    <img src="images/sdg17-logo.png" alt="SDG 17 Logo" class="nav-logo">
+    <span>SDG 17 Showcase</span>
+</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- GALLERY INTRO -->
+    <section class="gallery-section">
+        <h1>Partnerships in Action</h1>
+        <p>
+            This gallery presents real-world examples of collaboration that reflect the
+            principles of <strong>Sustainable Development Goal 17</strong>. The visuals
+            highlight how governments, international organizations, private companies,
+            and communities work together to achieve sustainable outcomes.
+        </p>
+        <p>
+            Each image represents a different form of partnership, including global
+            policy dialogue, technological innovation, financing initiatives, and
+            cross-sector cooperation.
+        </p>
+    </section>
+
+    <!-- IMAGE CAROUSEL -->
+    <section class="carousel-section" aria-label="SDG 17 partnership image carousel">
+
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="images/un.jpeg"
+                     alt="United Nations partnership initiative promoting SDGs through global collaboration">
+
+                <img src="images/ai.jpg"
+                     alt="Artificial intelligence and innovation partnerships supporting the SDGs">
+
+                <img src="images/overview.jpg"
+                     alt="Overview of Sustainable Development Goals and partnership framework">
+
+                <img src="images/13th-IAEG-SDGs.jpg"
+                     alt="Sustainable events sector promoting SDG-aligned partnerships">
+
+                <img src="images/2024-03-sdg-investormap-launch-4.jpg"
+                     alt="Private sector partnership supporting Sustainable Development Goals">
+            </div>
+
+            <button class="prev" aria-label="Previous image">❮</button>
+            <button class="next" aria-label="Next image">❯</button>
+        </div>
+
+        <p class="gallery-info">
+            All images are sourced from official United Nations platforms and partner
+            organizations, representing authentic examples of multi-stakeholder
+            partnerships contributing to the 2030 Agenda.
+        </p>
+
+    </section>
+
+    <section class="key-principles">
+    <h2>Types of Partnerships Featured</h2>
+    <p>
+        Sustainable Development Goal 17 emphasizes collaboration across sectors
+        and borders. The partnerships showcased in this gallery represent key
+        models used to advance the 2030 Agenda.
+    </p>
+
+    <ul>
+        <li>Public–private partnerships supporting sustainable financing</li>
+        <li>International cooperation led by the United Nations</li>
+        <li>Technology and innovation partnerships for data and AI solutions</li>
+        <li>Multi-stakeholder collaborations involving civil society</li>
+        <li>Capacity-building initiatives in developing countries</li>
+    </ul>
+</section>
+
+ <section class="form-section">
+        <h2>Propose a Partnership</h2>
+
+        <form id="contactForm" novalidate>
+
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" required placeholder="Your name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" required placeholder="you@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="organization">Organization</label>
+                <input type="text" id="organization" placeholder="Optional">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Collaboration Idea *</label>
+                <textarea id="message" rows="5" required placeholder="Describe your idea"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <div id="formMessage" class="form-message" aria-live="polite"></div>
+    </section>
+
+
+</main>
+
+<footer>
+    <p>© 2026 SDG 17 Partnerships Project | University of Cyberjaya</p>
+    <p>
+        Contact: partnerships@sdg17showcase.org |
+        <a href="https://twitter.com/UN" target="_blank" rel="noopener">Twitter</a> |
+        <a href="https://www.linkedin.com/company/united-nations" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+</footer>
+</body>
+</html>

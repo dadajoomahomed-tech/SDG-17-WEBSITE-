@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG 17 | Partnerships for Sustainable Development</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GLOBAL JS for all pages -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <nav aria-label="Primary navigation">
+        <div class="logo">
+    <img src="images/sdg17-logo.png" alt="SDG 17 Logo" class="nav-logo">
+    <span>SDG 17 Showcase</span>
+</div>
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Partnerships for the Goals
+           <img 
+        src="images/sdg-logo.png"
+        alt="United Nations Sustainable Development Goals color wheel"
+        class="sdg-wheel"
+            >
+        </h1>
+        <p>
+            Sustainable development is only possible when nations, organizations,
+            and communities work together toward shared goals.
+        </p>
+        <a href="gallery.html" class="cta-button">See Partnerships in Action</a>
+    </div>
+</section>
+<main>
+
+    <!-- INTRODUCTION -->
+    <section class="intro">
+        <h2>Understanding SDG 17</h2>
+        <p>
+            Sustainable Development Goal 17 focuses on strengthening global partnerships
+            to support the achievement of the 2030 Agenda. It highlights cooperation
+            across governments, private sectors, civil society, and academic institutions.
+        </p>
+        <p>
+            Global challenges such as climate change, inequality, and economic instability
+            cannot be solved in isolation. SDG 17 emphasizes shared responsibility,
+            mutual trust, and collective action.
+        </p>
+    </section>
+
+    <!-- IMAGE GALLERY -->
+    <section class="image-gallery">
+        <h2>Collaboration Across the World</h2>
+
+        <div class="gallery-grid">
+            <figure>
+                <img src="images/gallery-1.jpg" alt="International organizations working together">
+                <figcaption>International organizations collaborating on sustainability initiatives</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/background.jpg" alt="Community and private sector partnership">
+                <figcaption>Public and private sectors supporting local communities</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/gallery-3.jpg" alt="Youth-led partnership projects">
+                <figcaption>Youth and educational institutions driving future solutions</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- KEY AREAS -->
+    <section class="key-principles">
+        <h2>Core Areas of SDG 17</h2>
+        <ul>
+            <li><strong>Finance:</strong> Supporting sustainable development through global funding cooperation.</li>
+            <li><strong>Technology:</strong> Sharing innovation and digital solutions across regions.</li>
+            <li><strong>Capacity Building:</strong> Strengthening skills and institutional development.</li>
+            <li><strong>Trade:</strong> Promoting fair and inclusive international trade systems.</li>
+            <li><strong>Policy Alignment:</strong> Ensuring coherence across social, economic, and environmental policies.</li>
+            <li><strong>Data & Transparency:</strong> Improving monitoring and accountability worldwide.</li>
+        </ul>
+    </section>
+
+    <!-- IMPACT IMAGE -->
+    <section class="impact-visual">
+        <img 
+            src="images/partner.png"
+            alt="World map representing international cooperation"
+        >
+        <div class="impact-text">
+            <h2>Global Impact Through Unity</h2>
+            <p>
+                When partnerships cross borders and sectors, solutions become scalable
+                and sustainable. SDG 17 enables cooperation that transforms global ambition
+                into real-world impact.
+            </p>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="call-to-action">
+        <h2>Be Part of the Partnership</h2>
+        <p>
+            Individuals, organizations, and institutions all have a role to play.
+            Collaboration is the key to achieving a more inclusive and sustainable future.
+        </p>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="form-section">
+        <h2>Propose a Partnership</h2>
+
+        <form id="contactForm" novalidate>
+
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" required placeholder="Your name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" required placeholder="you@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="organization">Organization</label>
+                <input type="text" id="organization" placeholder="Optional">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Collaboration Idea *</label>
+                <textarea id="message" rows="5" required placeholder="Describe your idea"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <div id="formMessage" class="form-message" aria-live="polite"></div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 SDG 17 Partnerships Project | University of Cyberjaya</p>
+    <p>
+        Contact: partnerships@sdg17showcase.org |
+        <a href="https://twitter.com/UN" target="_blank" rel="noopener">Twitter</a> |
+        <a href="https://www.linkedin.com/company/united-nations" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+</footer>
+
+<script>
+    // Hero fade-in
+    document.addEventListener("DOMContentLoaded", () => {
+        const hero = document.querySelector(".hero-content");
+        hero.style.opacity = "0";
+        hero.style.transition = "opacity 1.2s ease";
+        setTimeout(() => hero.style.opacity = "1", 100);
+    });
+
+    // Form validation
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+        const feedback = document.getElementById("formMessage");
+
+        if (!name || !email || !message) {
+            feedback.textContent = "Please complete all required fields.";
+            feedback.style.color = "red";
+            return;
+        }
+
+        feedback.textContent = "Thank you. Your partnership proposal has been submitted.";
+        feedback.style.color = "green";
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
